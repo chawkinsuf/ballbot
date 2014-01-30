@@ -10,7 +10,7 @@ trace = True
 
 def rangetest(**argchecks):                 # Validate ranges for both+defaults
 	def onDecorator(func):                  # onCall remembers func and argchecks
-		if not __debug__:                   # True if "python –O main.py args..."
+		if not __debug__:                   # True if "python -O main.py args..."
 			return func                     # Wrap if debugging; else use original
 		else:
 			import sys
